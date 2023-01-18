@@ -157,6 +157,35 @@ if (state.glutenFreeCrust) {
   priceGlutenFreeCrust.style.display = "block";
 } 
 
+
+
+
+
+let totalPrice = 
+parseInt(document.querySelector('.panel b').innerText.split(" ")[0].slice(1)) 
+
+if(state.pepperoni){
+  totalPrice = totalPrice + parseInt(document.querySelector('li.pricePepperoni').innerText.split(" ")[0].slice(1)) 
+}
+
+if(state.mushrooms){
+  totalPrice = totalPrice + parseInt(document.querySelector('li.priceMushrooms').innerText.split(" ")[0].slice(1)) 
+}
+
+if(state.greenPeppers){
+  totalPrice = totalPrice + parseInt(document.querySelector('li.priceGreenPeppers').innerText.split(" ")[0].slice(1)) 
+}
+
+if(state.whiteSauce){
+  totalPrice = totalPrice + parseInt(document.querySelector('li.priceWhiteSauce').innerText.split(" ")[0].slice(1)) 
+}
+
+if(state.glutenFreeCrust){
+  totalPrice = totalPrice + parseInt(document.querySelector('li.priceGlutenFreeCrust').innerText.split(" ")[0].slice(1)) 
+}
+
+document.querySelector('#totalPrice').innerText = totalPrice
+
 }
 
 renderEverything();
