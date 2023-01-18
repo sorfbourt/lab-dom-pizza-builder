@@ -119,6 +119,44 @@ function renderButtons() {
 
 function renderPrice() {
   // Iteration 4: change the HTML of `<aside class="panel price">`
+  const pricePepperoni = document.querySelector('li.pricePepperoni')
+  const priceMushrooms = document.querySelector('li.priceMushrooms')
+  const priceGreenPeppers = document.querySelector('li.priceGreenPeppers')
+  const priceWhiteSauce = document.querySelector('li.priceWhiteSauce')
+  const priceGlutenFreeCrust = document.querySelector('li.priceGlutenFreeCrust')
+
+
+if (!state.pepperoni) {
+  pricePepperoni.style.display = "none";
+} 
+if (state.pepperoni) {
+  pricePepperoni.style.display = "block";
+} 
+if (!state.mushrooms) {
+  priceMushrooms.style.display = "none";
+} 
+if (state.mushrooms) {
+  priceMushrooms.style.display = "block";
+} 
+if (!state.greenPeppers) {
+  priceGreenPeppers.style.display = "none";
+} 
+if (state.greenPeppers) {
+  priceGreenPeppers.style.display = "block";
+} 
+if (!state.whiteSauce) {
+  priceWhiteSauce.style.display = "none";
+} 
+if (state.whiteSauce) {
+  priceWhiteSauce.style.display = "block";
+} 
+if (!state.glutenFreeCrust) {
+  priceGlutenFreeCrust.style.display = "none";
+} 
+if (state.glutenFreeCrust) {
+  priceGlutenFreeCrust.style.display = "block";
+} 
+
 }
 
 renderEverything();
